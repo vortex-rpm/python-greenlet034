@@ -41,7 +41,7 @@ chmod 644 benchmarks/*.py
 %install
 rm -rf %{buildroot}
 %{__python} setup.py install -O1 --skip-build --root %{buildroot}
- 
+
 %clean
 rm -rf %{buildroot}
 
@@ -52,10 +52,6 @@ rm -rf %{buildroot}
 %check
 # Run the upstream test suite:
 %{__python} setup.py test
-
-# Run the upstream benchmarking suite to further exercise the code:
-PYTHONPATH=$(pwd) %{__python} benchmarks/chain.py
-PYTHONPATH=$(pwd) %{__python} benchmarks/switch.py
 %endif
 
 %files
