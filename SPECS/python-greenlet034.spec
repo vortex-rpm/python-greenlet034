@@ -56,7 +56,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
-%doc doc/greenlet.txt README benchmarks AUTHORS NEWS
+%doc doc/greenlet.txt README.rst benchmarks AUTHORS NEWS
 %{python_sitearch}/greenlet.so
 %{python_sitearch}/greenlet*.egg-info
 
